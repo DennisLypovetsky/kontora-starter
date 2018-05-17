@@ -23,13 +23,13 @@ $.path.tasks.forEach(function (taskPath) {
 
 $.gulp.task('default', $.gulp.series(
   $.gulp.parallel('clean'),
-  $.gulp.parallel('scripts:lib'),
-  $.gulp.parallel('pug:dev', 'sass:dev', 'scripts:dev', 'img:dev', 'svg'),
+  $.gulp.parallel('js:lib'),
+  $.gulp.parallel('pug:dev', 'sass:dev', 'js:dev', 'img:dev', 'svg'),
   $.gulp.parallel('watch', 'serve')
 ));
 
 $.gulp.task('build', $.gulp.series(
   $.gulp.parallel('clean'),
-  $.gulp.parallel('scripts:lib'),
-  $.gulp.parallel('pug:build', 'sass:build', 'scripts:build', 'img:build', 'svg')
+  $.gulp.parallel('js:lib'),
+  $.gulp.parallel('pug:build', 'sass:build', 'js:build', 'img:build', 'svg')
 ));

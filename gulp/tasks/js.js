@@ -1,6 +1,6 @@
 module.exports = function () {
   // Сторонние библиотеки и плагины
-  $.gulp.task('scripts:lib', function () {
+  $.gulp.task('js:lib', function () {
     return $.gulp.src([
       'node_modules/jquery/dist/jquery.js'
     ])
@@ -9,7 +9,7 @@ module.exports = function () {
   });
 
   // Собирает в два одинаковых файла с разным названием
-  $.gulp.task('scripts:dev', function () {
+  $.gulp.task('js:dev', function () {
     return $.gulp.src([
       'src/static/js/libs.js',
       'src/static/js/main.js'
@@ -24,7 +24,7 @@ module.exports = function () {
   });
 
   // Собирает и минифицирует
-  $.gulp.task('scripts:build', function () {
+  $.gulp.task('js:build', function () {
     return $.gulp.src([
       'src/static/js/libs.js',
       'src/static/js/main.js'

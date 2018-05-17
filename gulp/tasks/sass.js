@@ -11,6 +11,8 @@ module.exports = function () {
         browers: ['last 2 versions']
       }))
       .pipe($.gcmq())
+      .pipe($.gulp.dest('build/static/css'))
+      .pipe($.gp.rename('style.min.css'))
       .pipe($.gulp.dest('build/static/css'));
   });
 
