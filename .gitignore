@@ -1,0 +1,12 @@
+/node_modules/
+/build/
+/.git/
+/.vscode/
+
+/**/Thumbs.db
+/**/*.DS_Store
+/**/*.psd
+/**/settings.json
+debug.log
+
+
