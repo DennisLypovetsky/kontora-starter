@@ -9,7 +9,6 @@ global.$ = {
   pngquant: require('imagemin-pngquant'),
   gcmq: require('gulp-group-css-media-queries'),
 
-
   path: {
     tasks: require('./gulp/config/tasks')
   }

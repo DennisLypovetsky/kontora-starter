@@ -1,6 +1,6 @@
 module.exports = function () {
   $.gulp.task('sass:dev', function () {
-    return $.gulp.src('src/static/sass/style.sass')
+    return $.gulp.src('src/styles/style.sass')
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError()
       }))
@@ -17,7 +17,7 @@ module.exports = function () {
   });
 
   $.gulp.task('sass:build', function () {
-    return $.gulp.src('src/static/sass/style.sass')
+    return $.gulp.src('src/styles/style.sass')
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError()
       }))

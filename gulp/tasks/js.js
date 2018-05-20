@@ -5,14 +5,14 @@ module.exports = function () {
       'node_modules/jquery/dist/jquery.js'
     ])
       .pipe($.gp.concat('libs.js'))
-      .pipe($.gulp.dest('src/static/js/'));
+      .pipe($.gulp.dest('src/js/'));
   });
 
   // Собирает в два одинаковых файла с разным названием
   $.gulp.task('js:dev', function () {
     return $.gulp.src([
-      'src/static/js/libs.js',
-      'src/static/js/main.js'
+      'src/js/libs.js',
+      'src/js/main.js'
     ])
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError()
@@ -26,8 +26,8 @@ module.exports = function () {
   // Собирает и минифицирует
   $.gulp.task('js:build', function () {
     return $.gulp.src([
-      'src/static/js/libs.js',
-      'src/static/js/main.js'
+      'src/js/libs.js',
+      'src/js/main.js'
     ])
       .pipe($.gp.plumber({
         errorHandler: $.gp.notify.onError()
