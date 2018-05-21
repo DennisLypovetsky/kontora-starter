@@ -7,7 +7,7 @@ module.exports = function () {
         errorHandler: $.gp.notify.onError('Pug: <%= error.message %>')
       }))
       .pipe($.gp.pug({
-        // locals: ('./src/markup/pages/**/*.json', 'utf8'),
+        locals: ('./src/markup/pages/**/*.json', 'utf8'),
         pretty: true
       }))
       .pipe($.gulp.dest('build'));
