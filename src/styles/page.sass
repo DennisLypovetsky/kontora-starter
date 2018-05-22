@@ -37,7 +37,6 @@ body
 
 a,
 button,
-[role='button'],
 input,
 label,
 select,
@@ -45,6 +44,13 @@ textarea
   touch-action: manipulation // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
   margin: 0                  // Убираем margin в Firefox и Safari
 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: middle
 
 button,
 input
@@ -74,8 +80,8 @@ img
   height: auto
 
 a
-  color: $link-color
   text-decoration: none
+  color: $link-color
 
   background-color: transparent
 
