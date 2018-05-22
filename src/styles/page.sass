@@ -1,0 +1,15 @@
+.page // html
+  box-sizing: border-box
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -ms-overflow-style: scrollbar
+  -ms-text-size-adjust: 100%
+  min-width: 320px
+  min-height: 100%
+
+  &__wrapper
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
+    +bp-min(380)
+      background-color: #666666
