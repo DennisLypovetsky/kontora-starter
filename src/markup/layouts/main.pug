@@ -1,20 +1,26 @@
-include ../mixins/bemto/bemto.pug
+include ../mixins/bemto/bemto
+include ../mixins/mixins
 block variables
 
-doctype html
-html(class="page " + pageModifier, lang="uk")
++b.HTML.page(class= pageModifier, lang="uk")
+
   head
     meta(charset="utf-8")
     title #{title}
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="description" content=description)
     meta(property="og:image" content=ogImage)
+    //- Фавиконки (https://realfavicongenerator.net)
 
     style(body="opacity: 0; overflow-x: hidden;", html="background-color: #000;")
 
   body
-    .page__wrapper
-      block content
+    +e.wrapper
+      include ../modules/header
+      +e.MAIN.content
+        block content
+      include ../modules/footer
 
     link(rel="stylesheet", href="static/css/style.min.css")
     script(src="static/js/scripts.min.js")
+    block script
