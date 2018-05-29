@@ -4,7 +4,11 @@ module.exports = function () {
       server: {
         baseDir: "./build"
       },
-      open: false // см. http://localhost:3000
+      notify: false,
+      ghostMode: false,
+      open: false, // см. в http://localhost:3000
+      // open: 'tunnel',
+      // tunnel: true
     });
     $.browserSync.watch('build', $.browserSync.reload)
   });
