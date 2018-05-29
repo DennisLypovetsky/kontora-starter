@@ -2,11 +2,10 @@
 /build/
 /.git/
 /.vscode/
+/src/static/data-img/
 
 /**/Thumbs.db
 /**/*.DS_Store
 /**/*.psd
 /**/settings.json
 debug.log
-
-
