@@ -2,7 +2,8 @@ module.exports = function () {
   // Сторонние библиотеки и плагины
   $.gulp.task('js:lib', function () {
     return $.gulp.src([
-      'node_modules/jquery/dist/jquery.js'
+      'node_modules/jquery/dist/jquery.js',
+      // 'src/static/libs/uranium.js/uranium.js'
     ])
       .pipe($.gp.concat('libs.js'))
       .pipe($.gulp.dest('src/js/'));
