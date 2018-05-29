@@ -24,7 +24,7 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel('clean'),
   $.gulp.parallel('js:lib'),
   $.gulp.parallel('js:modules'),
-  $.gulp.parallel('pug:dev', 'sass:dev', 'js:dev', 'img:dev', 'svg'),
+  $.gulp.parallel('pug:dev', 'sass:dev', 'js:dev', 'img:dev', 'svg:copy', 'svg:sprite'),
   $.gulp.parallel('watch', 'serve')
 ));
 
@@ -32,5 +32,5 @@ $.gulp.task('build', $.gulp.series(
   $.gulp.parallel('clean'),
   $.gulp.parallel('js:lib'),
   $.gulp.parallel('js:modules'),
-  $.gulp.parallel('pug:build', 'sass:build', 'js:build', 'img:build', 'svg')
+  $.gulp.parallel('pug:build', 'sass:build', 'js:build', 'img:build', 'svg:copy', 'svg:sprite')
 ));
