@@ -4,6 +4,9 @@
 /.vscode/
 /src/static/data-img/
 
+src/js/libs.js
+src/js/modules.js
+
 /**/Thumbs.db
 /**/*.DS_Store
 /**/*.psd
