@@ -1,0 +1,38 @@
+.heading {
+
+  &__title {
+
+    span {
+      position: relative;
+      z-index: $z-above;
+
+      display: inline-block;
+      @include pd(8px);
+      padding-bottom: 12px;
+
+      color: #ffffff;
+
+      @include bp(1024) {
+
+        @include pd(14px);
+        padding-bottom: 14px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $z-before;
+
+        @include size(100%);
+
+        background-color: $a-default;
+
+        @include bp(1024) {
+          display: none;
+        }
+      }
+    }
+  }
+}

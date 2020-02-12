@@ -1,20 +1,20 @@
 module.exports = function () {
   $.gulp.task('img:dev', function () {
-    return $.gulp.src('src/static/img/**/*.{png,jpg,webp}')
-      .pipe($.gulp.dest('build/static/img/'));
+    return $.gulp.src('src/blocks/**/img/*.{png,jpg,webp,svg}')
+      .pipe($.gulp.dest('build/img/'));
   });
 
   $.gulp.task('img:build', function () {
-    return $.gulp.src('src/static/img/**/*.{png,jpg,webp}')
+    return $.gulp.src('src/blocks/**/img/*.{png,jpg,webp,svg}')
       .pipe($.gp.imagemin([
         $.mozjpeg({
           quality: 65
         }),
         $.pngquant({
-          quality: 65,
+          quality: [0.65, 0.75],
           speed: 1
         })
       ]))
-      .pipe($.gulp.dest('build/static/img/'));
+      .pipe($.gulp.dest('build/img/'));
   });
 }

@@ -1,0 +1,21 @@
+mixin form-line(title, type, placeholder, name, required)
+  +e.P.line
+    +e.LABEL.label= title
+      +e.INPUT.input(
+        type=type,
+        placeholder=placeholder,
+        name=name,
+        required=required
+        )
+
+
+mixin form-line--textarea(title, placeholder, rows, maxlength, name, required)
+  +e.P.line
+    +e.LABEL.label= title
+      +e.TEXTAREA.textarea(
+        placeholder=placeholder,
+        rows=rows,
+        maxlength=maxlength,
+        name=name,
+        required=required
+        )

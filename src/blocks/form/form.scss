@@ -1,0 +1,30 @@
+.form {
+  max-width: 300px;
+  width: 100%;
+  @include mg(auto);
+
+  ::placeholder {
+    color: $grey--light;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid $bd-color;
+    border-radius: unset; // safari fix
+    appearance: none; // safari shadow fix
+  }
+
+  &__textarea {
+    line-height: $line-height;
+  }
+
+  &__button {
+    display: block;
+    margin-top: $margin * 1.5;
+    // margin-top: $margin * 2;
+    @include mg(auto);
+  }
+}

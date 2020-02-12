@@ -1,0 +1,27 @@
+.hero {
+
+  &__img-wrapper {
+    @include img(1920px, 1080px);
+  }
+
+  &__heading {
+    color: #ffffff;
+  }
+
+  &--index {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+
+    @include bgi('/hero/img/landscape-dennis_720.jpg', '/hero/img/landscape-dennis_1080.jpg');
+
+    @include bp(1024) {
+
+      @include bgi('/hero/img/landscape-dennis_1440.jpg', '/hero/img/landscape-dennis_2560.jpg');
+    }
+  }
+}

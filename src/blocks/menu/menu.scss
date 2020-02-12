@@ -1,0 +1,74 @@
+.menu {
+  @include unbutton();
+  @include unfont();
+
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: $z-menu;
+
+  @include size(55px);
+
+  vertical-align: middle;
+
+  background-image: linear-gradient(180deg, #fff, #f2f2f2);
+  box-shadow: 0 5px 10px rgba(79, 79, 79, .25);
+  border-radius: 5px;
+  transform: rotate(45deg);
+
+  @include trs(box-shadow);
+
+  user-select: none;
+
+  @include bp(768) {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    // box-shadow: 0 5px 10px rgba(79, 79, 79, .5);
+  }
+
+  &:active {
+    box-shadow: 0 5px 10px rgba(79, 79, 79, .10);
+  }
+
+  &__icon {
+    transform: rotate(-45deg);
+  }
+
+  &__line {
+    fill: $a-default;
+    opacity: 1;
+    transform: rotate(0);
+    transform-origin: 12px 12px;
+
+    @include trs();
+
+    &--1 {
+      transform-origin: 5px 10px; // Методом тыка
+    }
+
+    &--3 {
+      transform-origin: 7px 15px; // Методом тыка
+    }
+  }
+
+  &--open {
+
+    .menu__line {
+
+      &--1 {
+        transform: rotate(45deg);
+      }
+
+      &--2 {
+        opacity: 0;
+      }
+
+      &--3 {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

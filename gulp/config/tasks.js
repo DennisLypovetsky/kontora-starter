@@ -7,5 +7,6 @@ module.exports = [
   './gulp/tasks/svg',
   './gulp/tasks/serve',
   './gulp/tasks/watch',
-  './gulp/tasks/responsive'
+  './gulp/tasks/responsive',
+  './gulp/tasks/cachebust'
 ];

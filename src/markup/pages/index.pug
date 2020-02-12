@@ -1,10 +1,15 @@
-extends ../layouts/main
+extends ../layouts/layout
 
-block variables
-  - var title = ""
-  - var description = ""
-  - var ogImage = ""
-  - var pageModifier = "--index"
+block meta
+  - var title = ''
+  - var description = ''
+  - var ogImage = ''
+  - var pageModifier = '--index'
+  - var currentUrl = '/'
 
 block content
-  include index/index__hero
+  +b.SECTION.hero--index
+    +e.container.container
+      +b.HEADER.heading.__heading
+        +e.H1.title
+          span Kontora starter

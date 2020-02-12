@@ -1,0 +1,14 @@
++b.HEADER.header
+  +e.container.container
+    +e.NAV.nav
+      +e.A.link--logo(href= (currentUrl=='/') ? false : '/') Главная
+        +icon('kontora', '121.67', '30')
+
+      +e.UL.list--links
+        +e.LI.link-wrapper--mobile
+          //- If currentUrl = / than no href
+          +e.A.link(href= (currentUrl=='/') ? false : '/') Главная
+        +e.LI.link-wrapper
+          +e.A.link(href= (currentUrl=='/link1') ? false : '/link1') link1
+        +e.LI.link-wrapper
+          +e.A.link(href= (currentUrl=='/link2') ? false : '/link2') link2

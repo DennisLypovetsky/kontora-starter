@@ -1,0 +1,23 @@
+// accent
+$a-default: #02182b;
+
+// text
+$text-color: #333;
+$text-color--inactive: #828282;
+
+$grey--light: #bdbdbd;
+
+// links
+$link-color: $a-default;
+$link-color--hover: $a-default; // !default
+
+// borders
+$bd-color: rgba($text-color, .25);
+
+// gradients
+$g-default: linear-gradient(180deg, $a-default 0%, #c5001e 100%);
+$g-lazyloading: linear-gradient($text-color--inactive, rgba($text-color--inactive, .5));
+
+// backgorunds
+$bg-lazyloading: rgba(#000, .9);
+$bg-button: #e5e5e5;

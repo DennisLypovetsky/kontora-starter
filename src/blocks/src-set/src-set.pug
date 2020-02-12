@@ -1,0 +1,15 @@
+mixin srcset(alt, sm, md, xl)
+  +e.img-wrapper.loading
+    +e.IMG.img.lazyload(
+      data-srcset=`${sm} 360w, ${md} 720w, ${xl} 1080w`,
+      data-src=sm,
+      src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+      alt=alt)
+
+mixin srcset-hd(alt, md, xl, xxl, hd)
+  +e.img-wrapper.loading
+    +e.IMG.img.lazyload(
+      data-srcset=`${md} 720w, ${xl} 1080w, ${xxl} 1440w, ${hd} 1920w`,
+      data-src=md,
+      src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+      alt=alt)

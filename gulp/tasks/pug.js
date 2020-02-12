@@ -1,13 +1,11 @@
-// let dataJson = require('/src/markup/pages/index/index__hero.json')
-
 module.exports = function () {
   $.gulp.task('pug:dev', function () {
     return $.gulp.src('src/markup/pages/*.pug')
       .pipe($.gp.plumber({
-        errorHandler: $.gp.notify.onError('Pug: <%= error.message %>')
+        errorHandler: $.gp.notify.onError()
       }))
+      // .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
       .pipe($.gp.pug({
-        locals: ('./src/markup/pages/**/*.json', 'utf8'),
         pretty: true
       }))
       .pipe($.gulp.dest('build'));
@@ -16,11 +14,10 @@ module.exports = function () {
   $.gulp.task('pug:build', function () {
     return $.gulp.src('src/markup/pages/*.pug')
       .pipe($.gp.plumber({
-        errorHandler: $.gp.notify.onError('Pug: <%= error.message %>')
+        errorHandler: $.gp.notify.onError()
       }))
       .pipe($.gp.pug({
-        // locals: dataJson,
-        pretty: false
+        pretty: true
       }))
       .pipe($.gulp.dest('build'));
   });

@@ -1,0 +1,18 @@
+footer.footer
+  .footer__container.container
+    .footer__wrapper
+      ul.footer__list.footer__list--lang
+        li.footer__link-wrapper.is-inactive
+          a.footer__link.footer__link--lang(href) укр
+        li.footer__link-wrapper.is-inactive
+          a.footer__link.footer__link--lang(href) eng
+        li.footer__link-wrapper
+          //- Текущая ссылка без href
+          a.footer__link.footer__link--lang рус
+
+      .footer__link-wrapper
+        a.footer__link(href= (currentUrl=='#') ? false : '#') Политика конфиденциальности
+
+    .footer__made-by(style='background-image: url(https://2020.molfarforum.com/web-site/img/made-in_ru.svg)')
+      a.footer__link.footer__link--svg(href='https://kontora.design', target='_blank', rel='noopener', title='Сделано в «Дизайн-Конторе»') Сделано в «Дизайн-Конторе»
+        +icon('kontora')

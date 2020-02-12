@@ -1,0 +1,62 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-size: $font-size-button;
+  color: currentColor;
+
+  border: unset;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include bp(1024) {
+    padding: 15px 25px;
+
+    font-size: $font-size-button--desktop;
+  }
+
+  &--webinar-active {
+    color: #ffffff;
+
+    background-color: $a-default;
+
+    &:hover,
+    &:focus {
+      background-color: darken($a-default, 5%);
+    }
+
+    &:visited {
+      color: #fff;
+
+      border-bottom: unset;
+    }
+  }
+
+  &--webinar-inactive {
+    border: 1px dashed $text-color;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($text-color--inactive, .1%);
+      border: 1px dashed $text-color;
+    }
+
+    &:visited {
+      color: $text-color;
+
+      border-bottom: $text-color;
+    }
+  }
+
+  &--webinars-list-more {
+    // background-color: unset;
+    background-color: $bg-button;
+
+    &:hover,
+    &:focus {
+      background-color: darken($bg-button, 5%);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'base/libs.scss';
+
+@import 'mixins/animation-mixins.scss';
+@import 'mixins/text-mixins.scss';
+@import 'mixins/media-mixins.scss';
+@import 'mixins/img-mixins.scss';
+@import 'mixins/block-mixins.scss';
+@import 'mixins/tricks-mixins.scss';
+
+@import 'base/colors.scss';
+@import 'base/variables.scss';
+@import 'base/typography.scss';
+@import 'base/animation.scss';
+
+@import '../blocks/page/page.scss';
+@import '../blocks/is-disabled-scroll/is-disabled-scroll.scss';
+@import '../blocks/is-inactive/is-inactive.scss';
+@import '../blocks/container/container.scss';
+@import '../blocks/header/header.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/lazysizes/lazysizes.scss';
+@import '../blocks/hero/hero.scss';
+@import '../blocks/button/button.scss';
+@import '../blocks/menu/menu.scss';
+@import '../blocks/heading/heading.scss';
+@import '../blocks/form/form.scss';

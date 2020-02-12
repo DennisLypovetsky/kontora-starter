@@ -1,0 +1,194 @@
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family--serif: 'Georgia', 'Times New Roman', 'Times', serif;
+$font-family--monospace: SFMono-Regular, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+$font-family--headings: $font-family;
+
+$font-size: 12px !default;
+$font-size--desktop: 18px !default;
+
+$font-size-h1: 24px !default;
+$font-size-h2: 24px !default;
+$font-size-h3: 16px !default;
+$font-size-h4: 16px !default;
+$font-size-h5: 16px !default;
+$font-size-h6: 16px !default;
+
+$font-size-h1--tablet: $font-size-h1 !default;
+$font-size-h2--tablet: $font-size-h2 !default;
+$font-size-h3--tablet: $font-size-h3 !default;
+$font-size-h4--tablet: $font-size-h4 !default;
+$font-size-h5--tablet: $font-size-h5 !default;
+$font-size-h6--tablet: $font-size-h6 !default;
+
+$font-size-h1--desktop: 36px !default;
+$font-size-h2--desktop: 36px !default;
+$font-size-h3--desktop: 24px !default;
+$font-size-h4--desktop: $font-size--desktop !default;
+$font-size-h5--desktop: $font-size--desktop !default;
+$font-size-h6--desktop: $font-size--desktop !default;
+
+$font-size--small: .75em !default;
+
+$font-size-button: 14px !default;
+$font-size-button--desktop: 21px !default;
+
+$line-height: 1.4 !default;
+$line-height--headings: 1.25 !default;
+$line-height--small: 1.1 !default;
+
+$letter-spacing: .0357143em !default;
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  color: $text-color;
+  letter-spacing: $letter-spacing;
+
+  @include bp(1024) {
+    font-size: $font-size--desktop;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+  // @include mg-bottom(1em);
+
+  font-family: $font-family--headings;
+  font-weight: 700;
+  line-height: $line-height--headings;
+  // color: $accent;
+}
+
+h1 {
+  font-size: $font-size-h1;
+
+  @include bp(768) {
+    font-size: $font-size-h1--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h1--desktop;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+
+  @include bp(768) {
+    font-size: $font-size-h2--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h2--desktop;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+
+  @include bp(768) {
+    font-size: $font-size-h3--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h3--desktop;
+  }
+}
+
+h4 {
+  font-size: $font-size-h4;
+
+  @include bp(768) {
+    font-size: $font-size-h4--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h4--desktop;
+  }
+}
+
+h5 {
+  font-size: $font-size-h5;
+
+  @include bp(768) {
+    font-size: $font-size-h5--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h5--desktop;
+  }
+}
+
+h6 {
+  font-size: $font-size-h6;
+
+  @include bp(768) {
+    font-size: $font-size-h6--tablet;
+  }
+
+  @include bp(1024) {
+    font-size: $font-size-h6--desktop;
+  }
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+address,
+figure {
+  padding: unset;
+  margin: unset;
+  @include mg-bottom($margin);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+li > p,
+li > a {
+  display: inline;
+}
+
+// body title elements will held closer to texts and lists
+// p[class$='--title'] + p,
+// p[class$='--title'] + ol,
+// p[class$='--title'] + ul,
+// p[class~='title'] + p,
+// p[class~='title'] + ol,
+// p[class~='title'] + ul {
+//   margin-top: -$margin;
+// }
+
+address {
+  font-style: normal;
+}
+
+small,
+sub,
+sup {
+  font-style: $font-size--small;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family--monospace;
+}

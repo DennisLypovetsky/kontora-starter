@@ -1,0 +1,114 @@
+.footer {
+  font-size: 12px;
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    @include bp(768) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      align-content: flex-start;
+      grid-auto-flow: dense;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid rgba($grey--light, .25);
+
+    @include bp(768) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      border-bottom: 0;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &--lang {
+      display: flex;
+      @include mg-bottom(25px);
+
+      text-transform: uppercase;
+
+      @include bp(768) {
+        @include mg-bottom(20px);
+      }
+
+      .footer__link-wrapper {
+
+        &:not(:last-child) {
+          padding-right: 3px;
+          margin-right: 3px;
+
+          border-right: 1px solid $grey--light;
+        }
+      }
+    }
+  }
+
+  &__made-by {
+    // width: 189px; // Размер «Создано в Ивано-Франковске»
+    padding-bottom: calc(20px + 15px);
+
+    font-size: 0;
+
+    // background-image: url(../img/made-in_ru.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    @include bp(768) {
+      width: 100%;
+
+      justify-self: end;
+      text-align: right;
+
+      background-position: 100% 100%;
+
+      overflow: visible;
+    }
+  }
+
+  &__link {
+    @include unlink();
+    color: $grey--light;
+    // font-weight: 400;
+
+    border-bottom: unset;
+
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $grey--light;
+    }
+
+    &--lang {
+
+      &:not([href]) {
+        color: $a-default;
+
+        cursor: default;
+      }
+    }
+
+    &--svg {
+      @include unfont();
+    }
+  }
+
+  .icon {
+
+    &--kontora {
+      @include size(77px, 15px);
+
+      fill: $grey--light;
+    }
+  }
+}

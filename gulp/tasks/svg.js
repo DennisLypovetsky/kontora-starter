@@ -1,13 +1,8 @@
 module.exports = function () {
-  // простое копирование
-  $.gulp.task('svg:copy', function () {
-    return $.gulp.src(['src/static/img/**/*.svg', '!src/static/img/svg/**/*.svg'])
-      .pipe($.gulp.dest('build/static/img/'));
-  });
-
   // svg-спрайт
-  $.gulp.task('svg:sprite', function () {
-    return $.gulp.src('src/static/img/svg/*.svg')
+  $.gulp.task('svg', function () {
+    return $.gulp.src('src/blocks/svg-sprite/svg/*.svg')
+      .pipe($.gulp.dest('build/img/svg/')) // просто копируем для бекапа
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -31,6 +26,6 @@ module.exports = function () {
           }
         }
       }))
-      .pipe($.gulp.dest('build/static/img/svg/'))
+      .pipe($.gulp.dest('build/img/svg/'))
   });
 }

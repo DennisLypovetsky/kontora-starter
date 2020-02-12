@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  z-index: $z-header;
+
+  width: 100%;
+
+  font-size: $font-size;
+  color: #ffffff !important;
+
+  background-image: $g-default;
+  transform: translateY(-100%);
+
+  @include trs(background-color, .5s);
+
+  @include bp(768) {
+    color: $a-default;
+
+    background-image: unset;
+    transform: translateY(0);
+  }
+
+  .icon {
+
+    &--molfar {
+      fill: $a-default;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 15px;
+    padding-bottom: 100px;
+
+    @include bp(768) {
+      justify-content: center;
+      flex-direction: row;
+      height: 60px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: block;
+
+    text-align: center;
+
+    @include bp(768) {
+      display: flex;
+    }
+
+    &--links {
+      margin-bottom: auto;
+
+      @include bp(768) {
+        // margin-right: 135px;
+        margin-bottom: 0;
+      }
+
+      // Стилизация линка на текущую страницу
+      .header__link {
+
+        &:not([href]) {
+          text-decoration: line-through;
+
+          cursor: default
+        }
+      }
+    }
+  }
+
+  &__link-wrapper {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include bp(768) {
+        margin-right: 35px;
+        margin-bottom: unset;
+      }
+    }
+
+    &--mobile {
+
+      @include bp(768) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    color: inherit;
+
+    border-bottom: unset;
+
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+      color: inherit;
+    }
+
+    &--logo {
+      position: fixed;
+      top: calc(100vh + 15px);
+
+      @include unfont();
+
+      @include bp(768) {
+        position: static;
+        top: auto;
+
+        margin-right: auto;
+      }
+    }
+
+    &--lang {
+      text-transform: uppercase;
+    }
+  }
+
+  &--mobile {
+    transform: translateY(0%);
+
+    @include trs(transform, .25s, ease-in);
+
+    .header__link {
+
+      &--logo {
+        position: static;
+        top: auto;
+
+        margin-bottom: auto;
+      }
+    }
+
+    .icon {
+
+      &--molfar {
+        fill: #fff;
+      }
+    }
+  }
+
+  // модификатор, который делает подложку полупрозрачной
+  &--substrate {
+    background-color: rgba($a-default, .95);
+  }
+}

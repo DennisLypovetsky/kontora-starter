@@ -1,0 +1,14 @@
+//------------------------------------------------------------------------------
+//  Mixins transitions
+//------------------------------------------------------------------------------
+
+// padding to the sides
+// helps to avoid overriding
+@mixin pd ($padding-left, $padding-right: $padding-left) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin trs ($prop: all, $time: .25s, $easing: ease-out) {
+  transition: $prop $time $easing;
+}
