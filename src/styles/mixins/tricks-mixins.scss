@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 
 // if you need to go ouside of the box
-@mixin break-out--before ($color: $border-color, $x2: null) {
+@mixin break-out--before ($color: $bd-color, $x2: null) {
   position: relative;
 
   &::before {
