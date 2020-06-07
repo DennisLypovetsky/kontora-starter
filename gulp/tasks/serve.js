@@ -9,7 +9,7 @@ module.exports = function () {
       reloadOnRestart: true,
       notify: false,
       ghostMode: false,
-      open: false, // см. в http://localhost:3000
+      open: true, // см. в http://localhost:3000
       // open: 'tunnel',
       // tunnel: true
     });
