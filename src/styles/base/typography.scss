@@ -58,7 +58,7 @@ h4,
 h5,
 h6 {
   margin: unset;
-  // @include mg-bottom(1em);
+  // @include mg-bottom($margin);
 
   font-family: $font-family--headings;
   font-weight: 700;
