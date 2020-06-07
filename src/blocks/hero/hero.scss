@@ -1,9 +1,5 @@
 .hero {
 
-  &__img-wrapper {
-    @include img(1920px, 1080px);
-  }
-
   &__heading {
     color: #ffffff;
   }
