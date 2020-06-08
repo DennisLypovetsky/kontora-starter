@@ -23,41 +23,6 @@
 
     // @include mg-section(2em, 3em, 1024);
   }
-
-  &--webinar {
-
-    .page__content {
-      padding-top: 80px;
-    }
-
-    .container {
-      @include bp(700 + 40) {
-        @include maxw(700);
-      }
-    }
-
-    ul,
-    ol {
-
-      @include bp(414) {
-        list-style-position: outside;
-      }
-    }
-  }
-
-  &--thank-you,
-  &--oops {
-
-    .page__content {
-      padding-top: 80px;
-    }
-
-    .container {
-      @include bp(700 + 40) {
-        @include maxw(700);
-      }
-    }
-  }
 }
 
 *,
